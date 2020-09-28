@@ -15,10 +15,73 @@
     <meta name="apple-mobile-web-app-title" content="Hello World" />
     <meta name="msapplication-TileImage" content="images/hello-icon-144.png" />
     <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="agenda.json"></script>
   </head>
-  <body class="fullscreen">
+  <body>
     <div class="container">
-      <h1 class="title">Hello World!</h1>
+      <div class="card-columns">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Hello!</h5>
+            <p class="card-text">
+              <span class="en">Good morning</span>
+              <span class="de">Guten Morgen</span>
+              <span class="it">Ciao</span>
+              Welcome to vodQA workshop
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">GeoLocation</h5>
+            <p class="card-text">
+              Click on the <b>Show my location</b> to know your current geo
+              location
+            </p>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="getLocation()"
+            >
+              Show my location
+            </button>
+          </div>
+          <p class="card-text" id="current-geo-loc"></p>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Server Date & Time</h5>
+            <p id="currentDateTime" class="card-text"></p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Language Browser</h5>
+            <p id="currentLanguage" class="card-text"></p>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="js/main.js"></script>
   </body>
