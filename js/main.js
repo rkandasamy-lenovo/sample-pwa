@@ -21,6 +21,16 @@ window.onload = () => {
   $("#currentLanguage").html(userLang);
 };
 
+window.addEventListener("load", function () {
+  function updateOnlineStatus(event) {
+    let condition = navigator.onLine ? "online" : "offline";
+    $("#conStatus").html(condition);
+  }
+
+  window.addEventListener("online", updateOnlineStatus);
+  window.addEventListener("offline", updateOnlineStatus);
+});
+
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
