@@ -5,11 +5,13 @@ window.onload = () => {
     navigator.serviceWorker.register("./sw.js");
   }
 
-  $.getJSON("http://time.jsontest.com", function (data) {
-    var text = `Date: ${data.date}<br />
-                  Time: ${data.time}<br />
-                  Unix time: ${data.milliseconds_since_epoch}<br />
-                  Powerd By: JSON Test.com
+  const timeApi = "https://worldtimeapi.org/api/timezone/Asia/Kolkata";
+  $.getJSON(timeApi, (data) => {
+    var text = `Date: ${data.datetime.split("T")[0]}<br />
+                  Time: ${data.datetime.split("T")[1].split(".")[0]} 
+                  ${data.abbreviation}<br />
+                  Unix time: ${data.unixtime}<br />
+                  Powerd By: World Time API
                   `;
 
     $("#currentDateTime").html(text);
