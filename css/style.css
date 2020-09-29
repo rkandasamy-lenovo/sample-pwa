@@ -2,28 +2,6 @@ body {
   font-family: sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  body, .card {
-    background-color: #111 !important;
-    color: #eee;
-  }
-  .bg-light, .card {
-    background-color: #333 !important;
-  }
-  .bg-white {
-    background-color: #000 !important;
-  }
-  .bg-black {
-    background-color: #eee !important;
-  }
-  .btn-primary {
-    color: #100101 !important;
-  }
-  a {
-    color: #64aaf6 !important;
-  }
-}
-
 #current-geo-loc {
   margin-left: 1rem;
   margin-bottom: 1rem;
@@ -102,4 +80,26 @@ body {
 
 a {
   color: #0152a9 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  body, .card {
+    background-color: #111 !important;
+    color: #eee;
+  }
+  .bg-light, .card {
+    background-color: #333 !important;
+  }
+  .bg-white {
+    background-color: #000 !important;
+  }
+  .bg-black {
+    background-color: #eee !important;
+  }
+  .btn-primary {
+    color: #100101 !important;
+  }
+  a {
+    color: #64aaf6 !important;
+  }
 }
