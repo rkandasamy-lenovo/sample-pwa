@@ -46,3 +46,51 @@ body {
   display: none;
   margin: 20px;
 }
+
+.logo-helloworld {
+  width: 70%;
+  margin: 26px;
+  padding-left: 16%;
+}
+
+@media (min-width: 768px) {
+  .logo-helloworld {
+    width: 30%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .logo-helloworld {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .logo-helloworld {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .logo-helloworld {
+    width: 30%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .logo-helloworld {
+    width: 20%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .logo-helloworld {
+    width: 20%;
+    max-width: 100%;
+  }
+}
