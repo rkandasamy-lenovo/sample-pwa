@@ -3,11 +3,13 @@ body {
 }
 
 @media (prefers-color-scheme: dark) {
-  body, .card {
+  body,
+  .card {
     background-color: #111 !important;
     color: #eee;
   }
-  .bg-light, .card {
+  .bg-light,
+  .card {
     background-color: #333 !important;
   }
   .bg-white {
@@ -28,10 +30,19 @@ body {
   margin-right: 1rem;
 }
 
-.en, .de, .it {
+.en,
+.de,
+.it {
   display: none;
 }
 
-.en:lang(en), .de:lang(de), .it:lang(it) {
+.en:lang(en),
+.de:lang(de),
+.it:lang(it) {
   display: block;
+}
+
+#status-alert {
+  display: none;
+  margin: 20px;
 }

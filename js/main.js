@@ -22,11 +22,16 @@ window.onload = () => {
 };
 
 window.addEventListener("load", function () {
-  function updateOnlineStatus(event) {
+  function updateOnlineStatus() {
+    let x = document.getElementById("status-alert");
     let condition = navigator.onLine ? "online" : "offline";
     $("#conStatus").html(condition);
+    if (condition === "offline") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
   }
-
   window.addEventListener("online", updateOnlineStatus);
   window.addEventListener("offline", updateOnlineStatus);
 });
