@@ -57,6 +57,9 @@ body {
   .logo-helloworld {
     width: 30%;
     max-width: 100%;
+    margin: 0px;
+    padding-left: 0px;
+}
   }
 }
 
@@ -71,13 +74,6 @@ body {
   .logo-helloworld {
     padding-right: 15px;
     padding-left: 15px;
-  }
-}
-
-@media (min-width: 768px) {
-  .logo-helloworld {
-    width: 30%;
-    max-width: 100%;
   }
 }
 

@@ -4,7 +4,7 @@
     <div class="container header">
       <image
         class="logo-helloworld"
-        src="images/HelloWorld_Logo_RGB.jpg"
+        src="images/Hello-World.png"
         alt="#"
       ></image>
     </div>
@@ -49,7 +49,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
+  <body style="background-color: darkgray">
     <div class="container">
       <div id="status-alert" class="alert alert-warning" role="alert">
         <strong>There is no internet connection.</strong> Please check network
@@ -59,7 +59,7 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Hello!</h5>
-            <p class="card-text">
+            <p class="card-text" title="Welcome Card">
               <span class="en">Good morning</span>
               <span class="de">Guten Morgen</span>
               <span class="it">Ciao</span>
@@ -70,7 +70,7 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">GeoLocation</h5>
-            <p class="card-text">
+            <p class="card-text" title="GeoLocation">
               Click on the <b>Show my location</b> to know your current geo
               location
             </p>
@@ -82,24 +82,34 @@
               Show my location
             </button>
           </div>
-          <p class="card-text" id="current-geo-loc"></p>
+          <p
+            class="card-text"
+            title="Current GeoLocation"
+            id="current-geo-loc"
+          ></p>
         </div>
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Server Date & Time</h5>
-            <p id="currentDateTime" class="card-text"></p>
+            <p id="currentDateTime" title="Current Time" class="card-text"></p>
           </div>
         </div>
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Language Browser</h5>
-            <p id="currentLanguage" class="card-text"></p>
+            <p
+              id="currentLanguage"
+              title="Current Language"
+              class="card-text"
+            ></p>
           </div>
         </div>
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Internet Connectivity</h5>
-            <p id="conStatus" class="card-text">online</p>
+            <p id="conStatus" title="Connection Status" class="card-text">
+              online
+            </p>
           </div>
         </div>
       </div>
