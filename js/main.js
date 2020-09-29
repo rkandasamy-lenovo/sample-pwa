@@ -19,17 +19,24 @@ window.onload = () => {
 
   let userLang = navigator.language || navigator.userLanguage;
   $("#currentLanguage").html(userLang);
+
+  updateOnlineStatus();
 };
 
+//Refer https://wicg.github.io/netinfo
 window.addEventListener("load", function () {
-  function updateOnlineStatus(event) {
-    let condition = navigator.onLine ? "online" : "offline";
-    $("#conStatus").html(condition);
-  }
-
   window.addEventListener("online", updateOnlineStatus);
   window.addEventListener("offline", updateOnlineStatus);
 });
+
+function updateOnlineStatus(event) {
+  let condition = navigator.onLine ? "online" : "offline";
+  let connectionStatus = `Status: ${condition}<br />
+  Speed: ${navigator.connection.downlink} Mbit/s<br />
+  Speed Category: ${navigator.connection.effectiveType.toUpperCase()}<br />
+  `;
+  $("#conStatus").html(connectionStatus);
+}
 
 function getLocation() {
   if (navigator.geolocation) {
