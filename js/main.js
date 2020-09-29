@@ -5,6 +5,16 @@ window.onload = () => {
     navigator.serviceWorker.register("./sw.js");
   }
 
+  window.addEventListener("online", updateOnlineStatus);
+  window.addEventListener("offline", updateOnlineStatus);
+
+  updateTimeInfo();
+  showLangPreferences();
+  updateOnlineStatus();
+  updateBrowserInfo();
+};
+
+function updateTimeInfo() {
   const timeApi = "https://worldtimeapi.org/api/timezone/Asia/Kolkata";
   $.getJSON(timeApi, (data) => {
     var text = `Date: ${data.datetime.split("T")[0]}<br />
@@ -16,18 +26,7 @@ window.onload = () => {
 
     $("#currentDateTime").html(text);
   });
-
-  let userLang = navigator.language || navigator.userLanguage;
-  $("#currentLanguage").html(userLang);
-
-  updateOnlineStatus();
-  updateBrowserInfo();
-};
-
-window.addEventListener("load", function () {
-  window.addEventListener("online", updateOnlineStatus);
-  window.addEventListener("offline", updateOnlineStatus);
-});
+}
 
 function updateOnlineStatus(event) {
   let condition = navigator.onLine ? "online" : "offline";
@@ -53,6 +52,14 @@ function updateBrowserInfo() {
   Description: ${platform.description}
   `;
   document.getElementById("browserInfo").innerHTML = browserInfo;
+}
+
+function showLangPreferences() {
+  let defaultLang = navigator.language || navigator.userLanguage;
+  let langInfo = `Default Language: ${defaultLang}<br />
+  Preferred Lanaguages: ${navigator.languages}
+  `;
+  document.getElementById("currentLanguage").innerHTML = langInfo;
 }
 
 function getLocation() {
