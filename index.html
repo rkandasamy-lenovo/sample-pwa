@@ -54,6 +54,8 @@
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
     ></script>
+    <script src="js/platform-1.3.5.js"></script>
+    <script src="js/main.js"></script>
   </head>
   <body style="background-color: darkgray">
     <div class="container">
@@ -97,30 +99,50 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Server Date & Time</h5>
-            <p id="currentDateTime" title="Current Time" class="card-text"></p>
+            <p id="currentDateTime" title="Current Time" class="card-text">
+              Date: Unknown <br />
+              Time: Unknown <br />
+              Unix time: Unknown <br />
+              Powerd By: World Time API
+            </p>
           </div>
         </div>
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Language Browser</h5>
-            <p
-              id="currentLanguage"
-              title="Current Language"
-              class="card-text"
-            ></p>
+            <p id="currentLanguage" title="Current Language" class="card-text">
+              Unknown
+            </p>
           </div>
         </div>
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Internet Connectivity</h5>
             <p id="conStatus" title="Connection Status" class="card-text">
-              online
+              Status: Unknown <br />
+              Speed: Unknown <br />
+              Speed Category: Unknown <br />
             </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Browser Info</h5>
+            <p id="browserInfo" title="Browser Info" class="card-text">
+              Browser: N/A<br />
+              Version: N/A<br />
+              Vendor: N/A<br />
+              OS: N/A<br />
+              Hardware: N/A<br />
+              Description: N/A
+            </p>
+            <a title="Powerd By Platform.js" href="https://mths.be/platform">
+              Powerd By Platform.js
+            </a>
           </div>
         </div>
       </div>
     </div>
-    <script src="js/main.js"></script>
   </body>
 
   <footer class="page-footer font-small cyan darken-3">

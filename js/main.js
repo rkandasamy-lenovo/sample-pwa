@@ -21,6 +21,7 @@ window.onload = () => {
   $("#currentLanguage").html(userLang);
 
   updateOnlineStatus();
+  updateBrowserInfo();
 };
 
 window.addEventListener("load", function () {
@@ -41,6 +42,17 @@ function updateOnlineStatus(event) {
   } else {
     statusCheck.style.display = "none";
   }
+}
+
+function updateBrowserInfo() {
+  let browserInfo = `Browser: ${platform.name}<br />
+  Version: ${platform.version}<br />
+  Vendor: ${navigator.vendor}<br />
+  OS: ${platform.os}<br />
+  Hardware: ${navigator.platform}<br />
+  Description: ${platform.description}
+  `;
+  document.getElementById("browserInfo").innerHTML = browserInfo;
 }
 
 function getLocation() {
