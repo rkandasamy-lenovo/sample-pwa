@@ -24,17 +24,6 @@ window.onload = () => {
 };
 
 window.addEventListener("load", function () {
-  function updateOnlineStatus() {
-    let x = document.getElementById("status-alert");
-    let condition = navigator.onLine ? "online" : "offline";
-    $("#conStatus").html(condition);
-    if (condition === "offline") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
-  }
-
   window.addEventListener("online", updateOnlineStatus);
   window.addEventListener("offline", updateOnlineStatus);
 });
@@ -46,6 +35,12 @@ function updateOnlineStatus(event) {
   Speed Category: ${navigator.connection.effectiveType.toUpperCase()}<br />
   `;
   $("#conStatus").html(connectionStatus);
+  let statusCheck = document.getElementById("status-alert");
+  if (condition === "offline") {
+    statusCheck.style.display = "block";
+  } else {
+    statusCheck.style.display = "none";
+  }
 }
 
 function getLocation() {
