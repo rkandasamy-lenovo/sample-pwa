@@ -6,6 +6,7 @@ var filesToCache = [
   "./js/main.js",
   "./manifest.json",
   "./favicon.ico",
+  "./images/hello-icon-144.png",
   "./images/hello-icon-152.png",
   "//cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js",
   "//code.jquery.com/jquery-3.5.1.min.js",
