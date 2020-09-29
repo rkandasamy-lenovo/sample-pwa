@@ -18,6 +18,12 @@ body {
   .bg-black {
     background-color: #eee !important;
   }
+  .btn-primary {
+    color: #100101 !important;
+  }
+  a {
+    color: #abcff6 !important;
+  }
 }
 
 #current-geo-loc {
@@ -94,4 +100,12 @@ body {
   text-align: center;
   padding-bottom: 0rem !important;
   padding-top: 3rem !important;
+}
+
+.btn-primary {
+  color: #060606 !important;
+}
+
+a {
+  color: #0152a9 !important;
 }
