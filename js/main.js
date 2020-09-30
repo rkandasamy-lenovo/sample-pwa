@@ -36,10 +36,13 @@ function updateOnlineStatus(event) {
   `;
   $("#conStatus").html(connectionStatus);
   let statusCheck = document.getElementById("status-alert");
+  let socialMediaLinks = document.getElementById("social-media-links");
   if (condition === "offline") {
     statusCheck.style.display = "block";
+    socialMediaLinks.style.display = "none";
   } else {
     statusCheck.style.display = "none";
+    socialMediaLinks.style.display = "block";
   }
 }
 
