@@ -7,8 +7,10 @@ window.onload = () => {
 
   window.addEventListener("online", updateOnlineStatus);
   window.addEventListener("offline", updateOnlineStatus);
+  window.addEventListener("resize", updateDisplayInfo);
 
   updateTimeInfo();
+  updateDisplayInfo();
   showLangPreferences();
   updateOnlineStatus();
   updateBrowserInfo();
@@ -26,6 +28,11 @@ function updateTimeInfo() {
 
     $("#currentDateTime").html(text);
   });
+}
+
+function updateDisplayInfo() {
+  var text = `Width: ${visualViewport.width}<br/>Height: ${visualViewport.height}`;
+  $("#displayDimen").html(text);
 }
 
 function updateOnlineStatus(event) {
