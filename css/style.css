@@ -2,6 +2,30 @@ body {
   font-family: sans-serif;
 }
 
+@media (prefers-color-scheme: dark) {
+  body,
+  .card {
+    background-color: #111 !important;
+    color: #eee;
+  }
+  .bg-light,
+  .card {
+    background-color: #333 !important;
+  }
+  .bg-white {
+    background-color: #000 !important;
+  }
+  .bg-black {
+    background-color: #eee !important;
+  }
+  .btn-primary {
+    color: #100101 !important;
+  }
+  a {
+    color: #5ba5f5 !important;
+  }
+}
+
 #current-geo-loc {
   margin-left: 1rem;
   margin-bottom: 1rem;
@@ -12,11 +36,15 @@ body {
   margin-right: 1rem;
 }
 
-.en, .de, .it {
+.en,
+.de,
+.it {
   display: none;
 }
 
-.en:lang(en), .de:lang(de), .it:lang(it) {
+.en:lang(en),
+.de:lang(de),
+.it:lang(it) {
   display: block;
 }
 
@@ -83,11 +111,13 @@ a {
 }
 
 @media (prefers-color-scheme: dark) {
-  body, .card {
+  body,
+  .card {
     background-color: #111 !important;
     color: #eee;
   }
-  .bg-light, .card {
+  .bg-light,
+  .card {
     background-color: #333 !important;
   }
   .bg-white {
