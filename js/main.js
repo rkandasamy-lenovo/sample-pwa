@@ -31,7 +31,7 @@ function updateTimeInfo() {
 }
 
 function updateDisplayInfo() {
-  var text = `Width: ${visualViewport.width}<br/>Height: ${visualViewport.height}`;
+  var text = `Width: ${visualViewport.width}<br/> Height: ${visualViewport.height}<br/> Orientation: ${window.screen.orientation.type}`;
   $("#displayDimen").html(text);
 }
 
